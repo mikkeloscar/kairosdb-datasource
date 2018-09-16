@@ -100,7 +100,10 @@ System.register(["lodash", "../../beans/request/datapoints_query", "../../beans/
                     return {
                         cache_time: 0,
                         metrics: [{ name: metricName, tags: filters }],
-                        start_absolute: 0
+                        start_relative: {
+                            value: 5,
+                            unit: "minutes"
+                        }
                     };
                 };
                 return KairosDBQueryBuilder;
